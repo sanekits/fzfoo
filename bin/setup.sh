@@ -45,10 +45,9 @@ die() {
 main() {
     Script=${scriptName} main_base "$@"
     builtin cd "${HOME}/.local/bin" || die 208
-    # TODO: kit-specific steps can be added here
 
-
-
+    cd "$Kitname" || die 209
+    tar xzvf fzf*.tgz
 
     # FINALIZE: perms on ~/.local/bin/fzfoo.  We want others/group to be
     # able to traverse dirs and exec scripts, so that a source installation can

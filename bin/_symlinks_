@@ -12,3 +12,4 @@
 #
 # shellcheck disable=all
 fzfoo.sh
+fzf
